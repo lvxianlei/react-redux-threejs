@@ -1,0 +1,45 @@
+/*
+Error: Invalid GBK character "\xE7"
+        on line 462 of define.scss
+
+457:     z-index: 9;
+458:     cursor: pointer;
+459:   }
+460: }
+461: 
+462: /****用户登陆框 START****\/
+463: .warpForm{
+464:   display: flex;
+465:   align-items: center;
+466:   align-content: center;
+467:   width: 100%;
+
+Backtrace:
+define.scss:462
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/util.rb:1297:in `rescue in block in find_encoding_error'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/util.rb:1294:in `block in find_encoding_error'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/util.rb:1293:in `each'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/util.rb:1293:in `each_with_index'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/util.rb:1293:in `find_encoding_error'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/util.rb:902:in `check_sass_encoding'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/engine.rb:433:in `check_encoding!'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/engine.rb:389:in `_to_tree'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/engine.rb:295:in `render_with_sourcemap'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin/compiler.rb:209:in `each'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/exec/sass_scss.rb:361:in `watch_or_update'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/exec/base.rb:52:in `parse'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/lib/sass/exec/base.rb:19:in `parse!'
+C:/install/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-4.0.0.alpha.1/bin/scss:13:in `<top (required)>'
+C:/install/Ruby21-x64/bin/scss:23:in `load'
+C:/install/Ruby21-x64/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid GBK character \"\xE7\"\A         on line 462 of define.scss\A \A 457:     z-index: 9;\A 458:     cursor: pointer;\A 459:   }\A 460: }\A 461: \A 462: /****用户登陆框 START****/\A 463: .warpForm{\A 464:   display: flex;\A 465:   align-items: center;\A 466:   align-content: center;\A 467:   width: 100%;"; }

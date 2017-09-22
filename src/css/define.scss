@@ -1,0 +1,711 @@
+@import "./public/share";
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  height: inherit;
+  #app {
+    height: inherit;
+  }
+}
+
+ul, li {
+  list-style: none;
+  user-select: none;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.wd-100 {
+  width: 100%;
+}
+
+.wd10 {
+  width: 10px;
+}
+
+.wd50 {
+  width: 50px;
+}
+
+.hg50 {
+  height: 50px;
+}
+
+.hg54 {
+  width: 54px;
+}
+
+.lineHg {
+  line-height: 24px;
+}
+
+.header {
+  height: inherit;
+  background-color: $col-bg;
+  position: relative;
+}
+
+.chooseItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  background-color: $col-bg;
+  //display: none;
+  h1 {
+    font-size: 0;
+    text-align: right;
+    box-sizing: border-box;
+    padding-left: 20px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    min-width: 800px;
+    background-color: $col-head;
+    img {
+      display: block;
+      float: left;
+      border: none;
+      margin-top: 15px;
+    }
+  }
+  .centerContent {
+    margin: 125px auto 0;
+    width: 1152px;
+    height: 880px;
+    background-color: $col-bgf;
+    p {
+      float: left;
+      width: 172px;
+      box-sizing: border-box;
+      padding-top: 12px;
+      height: 880px;
+      font-size: 20px;
+      color: $col-font1;
+      background-color: $col-bg;
+      span {
+        display: inline-block;
+        width: 132px;
+        height: 40px;
+        border: 2px solid $col-font1;
+        border-radius: 20px;
+        font-size: 24px;
+        color: $col-font1;
+        line-height: 36px;
+        text-align: center;
+        i {
+          margin-right: 10px;
+          font-size: 40px;
+          line-height: 36px;
+          vertical-align: text-bottom;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+    }
+    .listItem {
+      float: left;
+      width: 980px;
+      height: 880px;
+      box-sizing: border-box;
+      overflow-y: auto;
+      padding-bottom: 50px;
+      h6 {
+        box-sizing: border-box;
+        padding-left: 20px;
+        width: 100%;
+        height: 54px;
+        line-height: 54px;
+        font-size: 24px;
+        color: $col-font1;
+        text-align: left;
+      }
+      ul {
+        li {
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          font-size: 20px;
+          color: $col-font1;
+          &:nth-child(odd) {
+            background-color: $col-small;
+          }
+          &:hover {
+            cursor: pointer;
+            color: $col-bgf;
+            background-color: $col-small2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  min-width: 1280px;
+  background-color: $col-head;
+  overflow: hidden;
+  z-index: 9;
+  h1 {
+    font-size: 0;
+    width: 100px;
+    height: 50px;
+    text-align: right;
+    line-height: 50px;
+    img {
+      display: inline-block;
+      margin-top: 15px;
+    }
+  }
+  .fr {
+    min-width: 800px;
+    height: 50px;
+    z-index: 9;
+    ul {
+      font-size: $font-h1;
+      color: $col-font-hover;
+      li {
+        float: left;
+        padding: 0 15px;
+        line-height: 50px;
+        vertical-align: middle;
+        &:nth-child(1) {
+          color: $col-bgf;
+          padding-right: 0;
+          margin-right: -10px;
+        }
+        &:nth-child(8) {
+          line-height: 45px;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+        span {
+          position: relative;
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          border: 1px solid $col-font-hover;
+          background-color: darken($col-head, 10%);
+          vertical-align: text-bottom;
+          margin-right: 5px;
+          i {
+            position: absolute;
+            display: none;
+            width: 16px;
+            height: 16px;
+            top: -5px;
+            left: 5px;
+            background: url("http://50jia-bim.oss-cn-beijing.aliyuncs.com/bim_ico/chosen%402x.png") no-repeat center;
+          }
+        }
+        b {
+          display: inline-block;
+          width: 1px;
+          height: 35px;
+          border-left: 1px solid $col-font-hover;
+          vertical-align: middle;
+        }
+        div {
+          display: inline-block;
+          box-sizing: content-box;
+          padding: 3px;
+          width: 54px;
+          height: 22px;
+          //border: 1px solid $col-font-hover;
+          vertical-align: middle;
+          line-height: 22px;
+          //background-color: darken($col-head, 10%);
+          i {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            margin-left: 8px;
+            margin-bottom: 2px;
+            border-left: 2px solid $col-font-hover;
+            border-bottom: 2px solid $col-font-hover;
+            -webkit-transform: rotate(-45deg);
+            vertical-align: baseline;
+          }
+        }
+        strong {
+          display: inline-block;
+          vertical-align: middle;
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          border: 1px solid #fff;
+          margin-right: 10px;
+          background-color: darken($col-head, 10%);
+          background: url("http://50jia-bim.oss-cn-beijing.aliyuncs.com/bim_ico/geren%402x.png") no-repeat center;
+        }
+        &.show {
+          span {
+            i {
+              display: inline-block;
+            }
+          }
+        }
+        &.select {
+          color: $col-bgf;
+        }
+      }
+    }
+  }
+}
+
+.sidebar {
+  width: 100%;
+  min-width: 1280px;
+  height: 54px;
+  position: relative;
+  background: $col-nav;
+  z-index: 5;
+
+  .subSidebar {
+    ul {
+      height: 54px;
+      line-height: 54px;
+      font-size: $font-h1;
+      color: $col-font1;
+      li {
+        float: left;
+        width: 66px;
+        text-align: center;
+        background-color: $col-small;
+        box-sizing: border-box;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &.leftSide, &.rightSide {
+        width: 200px;
+        border: 1px solid darken($col-small, 10%);
+        .showLi {
+          background-color: $col-nav;
+        }
+      }
+      &.middleSide {
+        li {
+          width: auto;
+          padding: 0 15px;
+          background-color: $col-nav;
+          i {
+            display: inline-block;
+            vertical-align: text-top;
+            width: 22px;
+            height: 22px;
+            margin-right: 8px;
+            background: url("http://50jia-bim.oss-cn-beijing.aliyuncs.com/bim_ico/huifu%402x.png") no-repeat center;
+          }
+        }
+      }
+    }
+  }
+
+  .tabDiv1 {
+    width: 200px;
+    font-size: $font-h2;
+    position: relative;
+  }
+
+  .mean {
+    width: 200px;
+    border-bottom: 1px solid darken($col-small, 10%);
+    background-color: $col-nav;
+    display: none;
+    &.show {
+      display: block;
+    }
+    div {
+      width: 200px;
+      border: 1px solid darken($col-small, 10%);
+      padding: 5px 8px;
+      box-sizing: border-box;
+      overflow: hidden;
+      border-bottom: hidden;
+      &:nth-child(1) {
+        border-top: hidden;
+      }
+      h5 {
+        font-size: $font-h1;
+        color: $col-font1;
+        padding-left: 8px;
+        line-height: 30px;
+      }
+      ul {
+        font-size: $font-h2;
+        li {
+          padding: 0 8px;
+          float: left;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  .stuff {
+    width: 200px;
+    background-color: $col-bg;
+    display: none;
+    &.show {
+      display: block;
+    }
+    .top {
+      width: 200px;
+      border: 1px solid darken($col-small, 10%);
+      padding: 5px 8px;
+      box-sizing: border-box;
+      border-top: hidden;
+      background-color: $col-nav;
+      .sup {
+        width: 100%;
+        padding-bottom: 10px;
+        p {
+          width: 100%;
+          text-align: center;
+          margin-left: 1px;
+          font-size: $font-h2;
+          span {
+            display: inline-block;
+            width: 60px;
+            height: 32px;
+            box-sizing: border-box;
+            border: 1px solid darken($col-small, 10%);
+            background-color: $col-small;
+            line-height: 32px;
+            color: $col-font-hover;
+            margin-left: -1px;
+            &.showLi {
+              background-color: $col-bgf;
+              color: $col-small2;
+            }
+          }
+        }
+      }
+      hr {
+        width: 200px;
+        margin-left: -8px;
+        color: darken($col-small, 10%);
+      }
+      h5 {
+        font-size: $font-h1;
+        color: $col-font1;
+        padding-left: 8px;
+        line-height: 30px;
+      }
+
+      ul {
+        li {
+          padding: 0 8px;
+          float: left;
+          line-height: 24px;
+        }
+      }
+      button {
+        display: block;
+        width: 162px;
+        height: 30px;
+        background-color: $col-small2;
+        border-radius: 2px;
+        line-height: 30px;
+        color: $col-bgf;
+        font-size: $font-h2;
+        text-align: center;
+        margin: 5px auto 0;
+      }
+    }
+
+    .bottom {
+      position: absolute;
+      top: -2px;
+      left: 200px;
+      margin-left: 5px;
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: $col-nav;
+      border: 1px solid darken($col-small, 10%);
+      p {
+        width: 200px;
+        text-align: center;
+        font-size: $font-h2;
+        margin-top: 10px;
+        margin-left: -10px;
+        span {
+          display: inline-block;
+          height: 32px;
+          box-sizing: border-box;
+          border: 1px solid darken($col-small, 10%);
+          line-height: 32px;
+          margin-left: -1px;
+          width: 80px;
+          color: $col-font1;
+          background-color: $col-bgf;
+          &:nth-child(2) {
+            margin-left: 20px;
+          }
+        }
+      }
+      ul {
+        margin-top: 10px;
+        width: 200px;
+        margin-left: -10px;
+        display: none;
+        li {
+          float: left;
+          width: 80px;
+          margin: 5px 10px;
+          section {
+            width: 100%;
+            height: 80px;
+            overflow: hidden;
+            background-color: darken($col-small, 20%);
+            img {
+              height: 80px;
+            }
+          }
+          small {
+            display: block;
+            text-align: center;
+            color: $col-font1;
+            font-size: $font-h2;
+          }
+        }
+        &.show {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .tabDiv2 {
+    width: 200px;
+    background: $col-bg;
+    font-size: $font-h2;
+    .first {
+      .top1 {
+        width: 100%;
+        background: $col-nav;
+        ul {
+          display: flex;
+          align-items: flex-end;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          width: 200px;
+          padding: 10px 5px;
+          box-sizing: border-box;
+          border: 1px solid darken($col-small, 10%);
+          border-top: none;
+          background: $col-nav;
+          li {
+            color: $col-font1;
+            text-align: center;
+            background-color: $col-small;
+            margin: 3px 3px;
+            &:nth-child(1) {
+              width: 58px;
+              height: 38px;
+              line-height: 38px;
+              vertical-align: bottom;
+              margin-left: 3px;
+            }
+            &:nth-child(2) {
+              width: 83px;
+              height: 52px;
+              line-height: 52px;
+            }
+            &:nth-child(3) {
+              display: flex;
+              justify-content: flex-start;
+              flex-flow: column wrap;
+              background-color: $col-bgf;
+              span {
+                display: inline-block;
+                width: 44px;
+                height: 38px;
+                line-height: 38px;
+                margin: 0 3px 6px 0;
+                background-color: $col-small;
+                &:nth-child(2) {
+                  margin: 0 3px 0 0;
+                }
+                &.select {
+                  background-color: $col-small2;
+                  color: $col-bgf;
+                }
+              }
+            }
+            &:nth-child(4) {
+              width: 70px;
+              height: 82px;
+              line-height: 82px;
+            }
+            &.select {
+              background-color: $col-small2;
+              color: $col-bgf;
+            }
+          }
+        }
+        ul {
+          display: none;
+          &.show {
+            display: flex;
+          }
+        }
+      }
+      .bottom {
+        width: 100%;
+        margin-top: 10px;
+        background: $col-nav;
+        p {
+          width: 100%;
+          height: 36px;
+          text-align: center;
+          line-height: 36px;
+          color: $col-bgf;
+          background: $col-font1;
+        }
+        ul {
+          width: 100%;
+          padding: 10px 0 10px 10px;
+          box-sizing: border-box;
+          li {
+            width: 100%;
+            height: 34px;
+            line-height: 34px;
+            font-size: $font-h2;
+            text-align: left;
+            color: $col-font1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bg {
+  &:hover {
+    color: $col-mosedown;
+  }
+}
+
+.canvas {
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  .canvasPage {
+    width: 100%;
+    height: inherit;
+    &:-webkit-full-screen {
+      width: 100%;
+      height: 900px;
+    }
+  }
+  span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    position: absolute;
+    top: 120px;
+    right: 210px;
+    line-height: 40px;
+    text-align: center;
+    z-index: 9;
+    cursor: pointer;
+  }
+}
+
+/****用户登陆框 START****/
+.warpForm {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: inherit;
+  background: #d2dff3 url("http://50jia-bim.oss-cn-beijing.aliyuncs.com/bim_pic/bg.jpg") no-repeat center center;
+  background-size: cover;
+  .login-form {
+    width: 438px;
+    height: 534px;
+    min-width: 300px;
+    margin: 0px auto;
+    padding: 50px 40px;
+    background: #fff;
+    box-sizing: border-box;
+    .yonghudenglu {
+      width: 182px;
+      padding-left: 40px;
+      margin: 0 auto 60px;
+      font-size: 32px;
+      color: #333;
+      text-align: center;
+      background: url("../img/square@2x.png") no-repeat 3px 10px;
+      -webkit-background-size: 30px auto;
+      background-size: 30px auto;
+    }
+    .ant-form-item {
+      font-size: 18px;
+      .usernameBox, .password {
+        font-size: 22px;
+        color: #666;
+      }
+      .usernameBox, .passwordBox {
+        .ant-input {
+          height: 48px;
+          line-height: 48px;
+          margin: 10px 0 0;
+          font-size: 18px;
+        }
+      }
+    }
+    .login-form-button {
+      width: 100%;
+      background: #688948;
+      border-color: #688948;
+      height: 48px;
+      line-height: 48px;
+      margin: 40px 0 0;
+    }
+  }
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+/****用户登陆框 END****/
+
+.closeBtn {
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin-left: 160px;
+  overflow: hidden;
+  background: url("http://127.0.0.1:8080/src/img/close.png") no-repeat;
+  background-size: 22px 44px;
+  background-position: 0 0;
+  &:hover {
+    cursor: pointer;
+    background-position: 0 -22px;
+  }
+}
