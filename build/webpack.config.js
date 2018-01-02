@@ -42,28 +42,29 @@ alias = Object.assign(alias, pickFiles({
 // import reducers from 'reducers/index';
 alias = Object.assign(alias, pickFiles({
     id: /(reducers\/[^\/]+).js/,
-    pattern: SRC_PATH + '/js/reducers/*'
+    pattern: SRC_PATH + '/redux/reducers/*'
 }));
 
 // actions
 // import actions from 'actions/index';
 alias = Object.assign(alias, pickFiles({
     id: /(actions\/[^\/]+).js/,
-    pattern: SRC_PATH + '/js/actions/*'
+    pattern: SRC_PATH + '/redux/actions/*'
 }));
 
 alias = Object.assign(alias, {
     'react-router': NODE_MODULES_PATH + '/react-router/lib/index.js',
     'react-redux': NODE_MODULES_PATH + '/react-redux/lib/index.js',
     'redux': NODE_MODULES_PATH + '/redux/lib/index.js',
-    'redux-thunk': NODE_MODULES_PATH + '/redux-thunk/lib/index.js'
+    'redux-thunk': NODE_MODULES_PATH + '/redux-thunk/lib/index.js',
+    '@': SRC_PATH
 });
 
 
 var config = {
     context: SRC_PATH,
     entry: {
-        app: [SRC_PATH + '/pages/index.js'],
+        app: [SRC_PATH + '/component/index.js'],
         lib: [
             'react', 'react-dom', 'react-router',
             'redux', 'react-redux', 'redux-thunk',
@@ -186,7 +187,7 @@ config.plugins.push(
     new HtmlwebpackPlugin({
         filename: 'index.html',
         chunks: ['app', 'lib'],
-        template: SRC_PATH + '/pages/index.html',
+        template: SRC_PATH + '/component/index.html',
         minify: __DEV__ ? false : {
             collapseWhitespace: true,
             collapseInlineTagWhitespace: true,
